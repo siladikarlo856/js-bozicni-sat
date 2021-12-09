@@ -51,10 +51,12 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
     margin: 0.2rem;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    min-width: 80px;
+    padding: 10px 0;
 }
 .number-container p{
     z-index: 3;
@@ -69,4 +71,28 @@ h1 {
     z-index: 3;
     font-family: 'Corinthia', cursive;
     font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    h1 {
+        font-size: 4rem; 
+        margin-top: 20%;
+    }
+    .counter-container {
+        grid-gap: 0.2rem;
+
+    }
+
+    .number-container p {
+        font-size: .8rem;
+    }
+    .number-container span {
+        font-size: 2rem;
+    }
+
+    .quote {
+        font-size: 2rem;
+    }
+
 }

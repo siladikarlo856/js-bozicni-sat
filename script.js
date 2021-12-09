@@ -22,7 +22,6 @@ function updateDOM() {
    hoursLeftEl.innerText = hoursUntilChristmas;
    minutesLeftEl.innerText = minutesUntilChristmas;
    secondsLeftEl.innerText = secondsUntilChristmas;
-
 }
 
 

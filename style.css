@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&family=Mountains+of+Christmas&family=Readex+Pro&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2020/11/27/14/54/candle-5782066_960_720.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(50, 0, 0, 0.6);
+    z-index: 2;
+}
+
+h1 {
+    z-index: 3;
+    /* font-family: 'Mountains of Christmas', cursive; */
+    font-family: 'Corinthia', cursive;
+    margin-top: 10%;
+    font-size: 6rem;
+}
+
+.counter-container {
+    z-index: 3;
+    font-family: 'Readex Pro', sans-serif;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2rem;
+}
+
+.number-container {
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.2rem;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+}
+.number-container p{
+    z-index: 3;
+    text-transform: uppercase;
+}
+.number-container span {
+    z-index: 3;
+    font-size: 4rem;
+}
+
+.quote {
+    z-index: 3;
+    font-family: 'Corinthia', cursive;
+    font-size: 3.5rem;
+}

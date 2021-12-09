@@ -5,6 +5,9 @@ const secondsLeftEl = document.getElementById('secondsLeft');
 
 const christmas2021 = new Date('December 25, 2021 00:00:00');
 
+function formatNumber(number) {
+    return number<10 ? `0${number}` : number;
+}
 
 function updateDOM() {
     const timeUntilChristmas = christmas2021.getTime() - Date.now();
@@ -18,10 +21,10 @@ function updateDOM() {
     const hoursUntilChristmas = Math.floor(timeUntilChristmas/1000/60/60 % 60);
     const daysUntilChristmas = Math.floor(timeUntilChristmas/1000/60/60/24 % 60);
     
-   daysLeftEl.innerText = daysUntilChristmas;
-   hoursLeftEl.innerText = hoursUntilChristmas;
-   minutesLeftEl.innerText = minutesUntilChristmas;
-   secondsLeftEl.innerText = secondsUntilChristmas;
+   daysLeftEl.innerText = formatNumber(daysUntilChristmas);
+   hoursLeftEl.innerText = formatNumber(hoursUntilChristmas);
+   minutesLeftEl.innerText = formatNumber(minutesUntilChristmas);
+   secondsLeftEl.innerText = formatNumber(secondsUntilChristmas);
 }
 
 

@@ -3,6 +3,11 @@ const hoursLeftEl = document.getElementById('hoursLeft');
 const minutesLeftEl = document.getElementById('minutesLeft');
 const secondsLeftEl = document.getElementById('secondsLeft');
 
+const second = 1000;
+const minute = second * 60;
+const hour = minute * 60;
+const day = hour * 24;
+
 const christmas2021 = new Date('December 25, 2021 00:00:00');
 
 function formatNumber(number) {
@@ -16,10 +21,10 @@ function updateDOM() {
         // It is Christmas
     }
 
-    const secondsUntilChristmas = Math.floor(timeUntilChristmas/1000 % 60);
-    const minutesUntilChristmas = Math.floor(timeUntilChristmas/1000/60 % 60);
-    const hoursUntilChristmas = Math.floor(timeUntilChristmas/1000/60/60 % 60);
-    const daysUntilChristmas = Math.floor(timeUntilChristmas/1000/60/60/24 % 60);
+    const daysUntilChristmas = Math.floor(timeUntilChristmas / day);
+    const hoursUntilChristmas = Math.floor((timeUntilChristmas % day) / hour);
+    const minutesUntilChristmas = Math.floor((timeUntilChristmas % hour) / minute);
+    const secondsUntilChristmas = Math.floor((timeUntilChristmas % minute) / second);
     
    daysLeftEl.innerText = formatNumber(daysUntilChristmas);
    hoursLeftEl.innerText = formatNumber(hoursUntilChristmas);

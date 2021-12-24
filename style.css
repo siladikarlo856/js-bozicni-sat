@@ -28,13 +28,26 @@ body {
     z-index: 2;
 }
 
-h1 {
+h1,
+.christmas-message {
     z-index: 3;
-    /* font-family: 'Mountains of Christmas', cursive; */
     font-family: 'Corinthia', cursive;
     margin-top: 10%;
     font-size: 6rem;
 }
+
+.christmas-message-container {
+    z-index: 3;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.christmas-message-container img {
+    width: 300px;
+    height: auto;
+}
+
 
 .counter-container {
     z-index: 3;
@@ -81,7 +94,6 @@ h1 {
     }
     .counter-container {
         grid-gap: 0.2rem;
-
     }
 
     .number-container {

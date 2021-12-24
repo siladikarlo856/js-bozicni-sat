@@ -3,6 +3,7 @@ const hoursLeftEl = document.getElementById('hoursLeft');
 const minutesLeftEl = document.getElementById('minutesLeft');
 const secondsLeftEl = document.getElementById('secondsLeft');
 
+
 const second = 1000;
 const minute = second * 60;
 const hour = minute * 60;
@@ -19,6 +20,9 @@ function updateDOM() {
     
     if (timeUntilChristmas <= 0) {
         // It is Christmas
+        console.log("Bozic je")
+        document.querySelectorAll(".counter-layer").forEach(el => el.style.display = "none");
+        document.querySelector(".christmas-message-container").style.display = "flex";
     }
 
     const daysUntilChristmas = Math.floor(timeUntilChristmas / day);
